@@ -1,0 +1,5 @@
+[evolvemaster]
+192.168.0.100
+
+[evolvemaster:vars]
+ansible_ssh_user=pi
