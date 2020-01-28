@@ -21,11 +21,17 @@
         dest: "{{ item.dest }}"
         mode: 0644
       with_items:
+        - { template: hostname.j2, dest: /etc/hostname }
+        - { template: hosts.j2, dest: /etc/hosts }
         - { template: dhcpcd.conf.j2, dest: /etc/dhcpcd.conf }
       notify:
+        - update hostname
         - delete dhcp leases
 
   handlers:
+    - name: update hostname
+      command: "hostname {{ evolvemaster_hostname }}"
+
     - name: delete dhcp leases
       file:
         path: /var/lib/dhcp/dhclient.leases

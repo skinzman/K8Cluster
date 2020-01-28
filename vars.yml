@@ -1,6 +1,15 @@
 ---
 # Mapping of what hardware MAC addresses should be configured with specific IPs.
 mac_address_mapping:
-  "dc:a6:32:73:de:8a":
+  "dc:a6:32:31:7c:87":
     name: kube1.evolvemaster.com
     ip: "10.0.100.61"
+  "dc:a6:32:2c:71:5c":
+    name: kube2.evolvemaster.com
+    ip: "10.0.100.62"
+  "dc:a6:32:2c:3d:dd":
+    name: kube3.evolvemaster.com
+    ip: "10.0.100.63"
+  "dc:a6:32:73:de:8a":
+    name: kube4.evolvemaster.com
+    ip: "10.0.100.64"
